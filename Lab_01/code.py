@@ -16,8 +16,11 @@ def euler(x, h):
     y = 0
     x0 = h
     while (x0 < x + h / 2):
-        y += h * (pow(y, 2) + pow(x0, 2))
-        x0 += h 
+        try:
+            y += h * (pow(y, 2) + pow(x0, 2))
+            x0 += h
+        except:
+            return 'None' 
     return y
 
 def runge_kutta(x, h, alpha):
@@ -25,16 +28,26 @@ def runge_kutta(x, h, alpha):
     y = 0
     x0 = h
     while (x0 < x + h / 2):
-        k1 = func(x0, y)
-        k2 = func(x0 + h / (2 * alpha), y + h / (2 * alpha))
-        y += h * ((1 - alpha) * k1 + alpha * k2)
-        x0 += h
+        try:
+            k1 = func(x0, y)
+            k2 = func(x0 + h / (2 * alpha), y + h / (2 * alpha) * k1)
+            y += h * ((1 - alpha) * k1 + alpha * k2)
+            x0 += h
+        except:
+            return 'None'
     return y
 
 if __name__ == "__main__":
     i = 0
     h = 0.1
-    print('   X  | 1 approx| 2 approx| 3 approx| 4 approx|  euler  |runge-kutta|')
-    while(i < 2.1):
-        print('%5.2f | %6.5f | %6.5f | %6.5f | %6.5f | %5.5f | %5.7f |' % (i, pikar(1, i), pikar(2, i), pikar(3, i), pikar(4, i), euler(i, pow(10, -5)), runge_kutta(i, pow(10, -5), 0.5)))
+    print('|   X   |  1 approx  |  2 approx  |  3 approx  |  4 approx  |    euler   |  runge-kutta  |')
+    while(i <= 2.5):
+        print('|{:^6.2f} | {:^10.5f} | {:^10.5f} | {:^10.5f} | {:^10.5f} | {:^10.7} | {:^13.8} |'.format(
+            i, pikar(1, i), 
+            pikar(2, i), 
+            pikar(3, i), 
+            pikar(4, i), 
+            str(euler(i, pow(10, -5))), 
+            str(runge_kutta(i, pow(10, -5), 0.5)))
+        )
         i += h
