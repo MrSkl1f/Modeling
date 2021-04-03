@@ -1,0 +1,110 @@
+\documentclass[14pt, a4paper]{extarticle}
+\usepackage{GOST}
+\usepackage{array}
+\usepackage{verbatim}
+\usepackage[detect-all]{siunitx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{tempora}
+
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\makeatother
+
+\usepackage{listings}
+\lstset{ 
+	language=python,
+	basicstyle=\small\sffamily, 
+	numbers=left, 
+	numberstyle=\tiny,
+	stepnumber=1,
+	numbersep=5pt,
+	showspaces=false,            
+	showstringspaces=false,      
+	showtabs=false,             
+	frame=single,            % рисовать рамку вокруг кода
+	tabsize=4,      
+	commentstyle=\color{green},
+	keywordstyle=\color{blue}\textbf,
+	numberstyle=\scriptsize\color{gray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},
+	captionpos=t,
+	breaklines=true,         % автоматически переносить строки 
+	breakatwhitespace=false, % переносить строки по пробелу
+	escapeinside={\#*}{*)} 
+}
+
+\begin{document}
+	
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|p{400pt}|} 
+		\hline
+		\begin{tabular}[c]{@{}c@{}} \includegraphics[scale=1]{source/b_logo.jpg} \\\end{tabular} &
+		\footnotesize\begin{tabular}[c]{@{}c@{}}\textbf{Министерство~науки~и~высшего~образования~Российской~Федерации}\\\textbf{Федеральное~государственное~бюджетное~образовательное~учреждение}\\\textbf{~высшего~образования}\\\textbf{«Московский~государственный~технический~университет}\\\textbf{имени~Н.Э.~Баумана}\\\textbf{(национальный~исследовательский~университет)»}\\\textbf{(МГТУ~им.~Н.Э.~Баумана)}\\\end{tabular}  \\
+		\hline
+	\end{tabular}
+\end{table}
+\noindent\rule{\textwidth}{4pt}
+\noindent\rule[14pt]{\textwidth}{1pt}
+\hfill 
+\noindent
+\makebox{ФАКУЛЬТЕТ~}%
+\makebox[\textwidth][l]{\underline{~«Информатика и системы управления»~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}%
+\\
+\noindent
+\makebox{КАФЕДРА~}%
+\makebox[\textwidth][l]{\underline{~«Программное обеспечение ЭВМ и информационные технологии»~}}%
+\\
+
+\begin{center}
+	\vspace{1.5cm}
+	{\bf\huge Отчёт\par}
+	{\bf\Large по лабораторной работе № 6\par}
+	\vspace{0.7cm}
+\end{center}
+
+
+\noindent
+\makebox{\large{\bf Название:}~~~}
+\makebox[\textwidth][l]{\large\underline{~Муравьиный алгоритм. Решение задачи коммивояжера.~}}\\
+
+\noindent
+\makebox{\large{\bf Дисциплина:}~~~}
+\makebox[\textwidth][l]{\large\underline{~Анализ алгоритмов~~~~~~~~~~~~~~~~~~~~~~~~~~}}\\
+
+\vspace{1.5cm}
+\noindent
+\begin{tabular}{l c c c c c}
+	Студент      & ~ИУ7-55Б~               & \hspace{2.5cm} & \hspace{2cm}                 & &  Д.О. Склифасовский \\\cline{2-2}\cline{4-4} \cline{6-6} 
+	\hspace{3cm} & {\footnotesize(Группа)} &                & {\footnotesize(Подпись, дата)} & & {\footnotesize(И.О. Фамилия)}
+\end{tabular}
+
+\noindent
+\begin{tabular}{l c c c c}
+	Преподователь & \hspace{5cm}   & \hspace{2cm}                 & & ~~~~~~Л.Л. Волкова~~~~~~\\\cline{3-3} \cline{5-5} 
+	\hspace{3cm}  &                & {\footnotesize(Подпись, дата)} & & {\footnotesize(И.О. Фамилия)}
+\end{tabular}
+
+\vspace{0.6cm}
+\begin{center}	
+	\vfill
+	\large \textit {Москва, 2020}
+\end{center}
+
+\thispagestyle {empty}
+\pagebreak
+
+% СОДЕРЖАНИЕ 
+\clearpage
+\tableofcontents
+
+% ВВЕДЕНИЕ
+\clearpage
+\section*{Введение}
+\addcontentsline{toc}{section}{Введение}
+
+
+\end{document}
