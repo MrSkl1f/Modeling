@@ -39,10 +39,10 @@ def runge_kutta(x, h, alpha):
 
 if __name__ == "__main__":
     i = 0
-    h = 0.1
+    h = 0.05
     print('|   X   |  1 approx  |  2 approx  |  3 approx  |  4 approx  |    euler   |  runge-kutta  |')
-    while(i <= 2.5):
-        print('|{:^6.2f} | {:^10.5f} | {:^10.5f} | {:^10.5f} | {:^10.5f} | {:^10.7} | {:^13.8} |'.format(
+    while(i <= 2.20):
+        print('|{:^6.2f} | {:^10.2f} | {:^10.2f} | {:^10.2f} | {:^10.2f} | {:^10.7} | {:^13.8} |'.format(
             i, pikar(1, i), 
             pikar(2, i), 
             pikar(3, i), 
@@ -51,3 +51,4 @@ if __name__ == "__main__":
             str(runge_kutta(i, pow(10, -5), 0.5)))
         )
         i += h
+    
